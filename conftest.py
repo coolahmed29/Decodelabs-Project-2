@@ -1,0 +1,1 @@
+# Ensures project root is on sys.path so `src.*` imports work in tests.

@@ -1,0 +1,26 @@
+2026-09-15 02:21:02,338 - src.data.loader - INFO - Loaded dataset from C:\Users\ahmed\Videos\Internships\Decode_Labs\fraud-detection-pipeline\data\raw\transactions.csv with shape (5000, 4)
+2026-09-15 02:21:02,339 - src.data.loader - INFO - Target column 'is_fraud' class distribution: {0: 4890, 1: 110}
+2026-09-15 02:21:02,342 - src.data.validation - WARNING - Found 2 duplicate row(s) in dataset
+2026-09-15 02:21:02,434 - __main__ - INFO - Split summary: {'train': {'total': 4000, 'fraud_count': 88, 'fraud_pct': 2.1999999999999997}, 'test': {'total': 1000, 'fraud_count': 22, 'fraud_pct': 2.1999999999999997}}
+2026-09-15 02:21:10,926 - src.models.tune - INFO - LR tuning complete — best_params: {'classifier__solver': 'liblinear', 'classifier__class_weight': None, 'classifier__C': 0.01}, best_score: 0.7334
+2026-09-15 02:21:28,550 - src.models.tune - INFO - RF tuning complete — best_params: {'classifier__n_estimators': 300, 'classifier__min_samples_split': 5, 'classifier__min_samples_leaf': 1, 'classifier__max_features': 'log2', 'classifier__max_depth': 5, 'classifier__class_weight': 'balanced'}, best_score: 0.6984
+2026-09-15 02:21:28,799 - __main__ - INFO - Model comparison:
+                 model  precision    recall   roc_auc  ...  tp   tn  fp  fn
+0  logistic_regression   0.340000  0.772727  0.882878  ...  17  945  33   5
+1        random_forest   0.216216  0.727273  0.855944  ...  16  920  58   6
+
+[2 rows x 9 columns]
+2026-09-15 02:21:28,836 - src.models.selection - WARNING - No model meets both min recall and precision requirements — falling back to highest recall model
+2026-09-15 02:21:28,843 - src.models.selection - INFO - Model saved to C:\Users\ahmed\Videos\Internships\Decode_Labs\fraud-detection-pipeline\models\logistic_regression_v1.joblib
+2026-09-15 02:22:36,150 - src.data.loader - INFO - Loaded dataset from C:\Users\ahmed\Videos\Internships\Decode_Labs\fraud-detection-pipeline\data\raw\transactions.csv with shape (5000, 4)
+2026-09-15 02:22:36,151 - src.data.loader - INFO - Target column 'is_fraud' class distribution: {0: 4890, 1: 110}
+2026-09-15 02:22:36,156 - src.data.validation - WARNING - Found 2 duplicate row(s) in dataset
+2026-09-15 02:22:36,228 - __main__ - INFO - Split summary: {'train': {'total': 4000, 'fraud_count': 88, 'fraud_pct': 2.1999999999999997}, 'test': {'total': 1000, 'fraud_count': 22, 'fraud_pct': 2.1999999999999997}}
+2026-09-15 02:22:43,263 - src.models.tune - INFO - LR tuning complete — best_params: {'classifier__solver': 'liblinear', 'classifier__class_weight': None, 'classifier__C': 0.01}, best_score: 0.7334
+2026-09-15 02:23:00,439 - src.models.tune - INFO - RF tuning complete — best_params: {'classifier__n_estimators': 300, 'classifier__min_samples_split': 5, 'classifier__min_samples_leaf': 1, 'classifier__max_features': 'log2', 'classifier__max_depth': 5, 'classifier__class_weight': 'balanced'}, best_score: 0.6984
+2026-09-15 02:23:00,684 - __main__ - INFO - Model comparison:
+                 model  precision    recall   roc_auc  accuracy  tp   tn  fp  fn
+0  logistic_regression   0.340000  0.772727  0.882878     0.962  17  945  33   5
+1        random_forest   0.216216  0.727273  0.855944     0.936  16  920  58   6
+2026-09-15 02:23:00,709 - src.models.selection - WARNING - No model meets both min recall and precision requirements — falling back to highest recall model
+2026-09-15 02:23:00,716 - src.models.selection - INFO - Model saved to C:\Users\ahmed\Videos\Internships\Decode_Labs\fraud-detection-pipeline\models\logistic_regression_v1.joblib
